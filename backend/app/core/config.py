@@ -1,7 +1,11 @@
 """应用配置：从环境变量 / .env 读取，禁止硬编码敏感信息。"""
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# 项目根目录（backend/app/core/config.py -> 上溯 3 级到 job-apply）
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 class Settings(BaseSettings):
@@ -15,8 +19,8 @@ class Settings(BaseSettings):
     app_env: str = "dev"  # dev / test / prod
     debug: bool = True
 
-    # 数据库：MVP 默认 SQLite，后续切 MySQL
-    database_url: str = "sqlite:///./data/job_apply.db"
+    # 数据库：MVP 默认 SQLite（锚定项目根，避免因启动目录不同产生多个库），后续切 MySQL
+    database_url: str = f"sqlite:///{(PROJECT_ROOT / 'data' / 'job_apply.db').as_posix()}"
 
     # 安全（生产必改）
     jwt_secret: str = "dev-secret-change-me"

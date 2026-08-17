@@ -25,6 +25,11 @@ data/*.sqlite3
 *.db
 *.sqlite3
 
+# scraper：提取/转换产物可由 data.7z 重新生成
+scraper/data/
+scraper/output/
+
+
 # 前端
 node_modules/
 dist/

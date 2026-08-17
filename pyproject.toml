@@ -7,7 +7,7 @@ requires-python = ">=3.11"
 [tool.ruff]
 line-length = 120
 target-version = "py311"
-src = ["backend"]
+src = ["backend", "scraper"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
@@ -15,7 +15,7 @@ extend-ignore = ["B008"]  # FastAPI `Depends()` 作为参数默认值属标准�
 # E/W: pycodestyle; F: pyflakes; I: isort; UP: pyupgrade; B: bugbear
 
 [tool.ruff.lint.isort]
-known-first-party = ["app"]
+known-first-party = ["app", "scraper"]
 
 [tool.pytest.ini_options]
 testpaths = ["backend/tests"]
