@@ -20,6 +20,9 @@ htmlcov/
 # 数据库与数据
 data/*.db
 data/*.sqlite3
+**/data/*.db
+**/data/*.sqlite3
+*.db
 *.sqlite3
 
 # 前端

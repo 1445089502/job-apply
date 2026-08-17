@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.models.models import Job
+from app.services.csv_import import import_jobs_csv
 from app.services.ingestion import import_jobs
 from app.services.runtime import embedder, index
 
@@ -35,3 +36,8 @@ def list_jobs(keyword: str = "", db: Session = Depends(get_db)) -> dict:
 @router.post("/jobs/import")
 def import_jobs_api(payload: dict, db: Session = Depends(get_db)) -> dict:
     return import_jobs(db, payload.get("jobs", []), embedder, index)
+
+
+@router.post("/jobs/import-csv")
+def import_jobs_csv_api(payload: dict, db: Session = Depends(get_db)) -> dict:
+    return import_jobs_csv(db, payload.get("csv", ""), embedder, index)

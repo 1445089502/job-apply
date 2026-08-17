@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job-apply · 求职助手</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <h1>💼 job-apply 求职助手</h1>
+        <nav class="tabs">
+            <button class="tab active" data-tab="recommend">推荐</button>
+            <button class="tab" data-tab="jobs">岗位</button>
+            <button class="tab" data-tab="applications">投递</button>
+            <button class="tab" data-tab="report">报表</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 推荐 -->
+        <section id="recommend" class="panel active">
+            <h2>岗位推荐</h2>
+            <textarea id="resume" placeholder="粘贴你的简历/技能描述，如：熟悉Java和日语N1，做过全栈开发" rows="3"></textarea>
+            <input id="preference" placeholder="偏好，如：想找对日开发或日企IT" class="w100">
+            <div class="filters">
+                <input id="city" placeholder="城市（可选）">
+                <input id="minSalary" type="number" placeholder="最低薪资K（可选）">
+                <input id="language" placeholder="语言要求（可选）">
+                <button id="btnRecommend">推荐</button>
+            </div>
+            <div id="recList"></div>
+        </section>
+
+        <!-- 岗位 -->
+        <section id="jobs" class="panel">
+            <h2>岗位库 <button id="btnLoadJobs" class="mini">刷新</button></h2>
+            <table id="jobTable">
+                <thead><tr><th>平台</th><th>标题</th><th>公司</th><th>城市</th><th>薪资</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- 投递 -->
+        <section id="applications" class="panel">
+            <h2>投递记录 <button id="btnLoadApps" class="mini">刷新</button></h2>
+            <div class="filters">
+                <input id="appJobId" type="number" placeholder="岗位ID">
+                <button id="btnRecordApp">记录投递</button>
+            </div>
+            <table id="appTable">
+                <thead><tr><th>ID</th><th>岗位ID</th><th>状态</th><th>时间</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- 报表 -->
+        <section id="report" class="panel">
+            <h2>数据报表 <button id="btnLoadStats" class="mini">刷新</button></h2>
+            <div id="statsCards" class="cards"></div>
+            <div id="funnelChart" class="chart"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
