@@ -1,0 +1,57 @@
+[
+  {
+    "platform": "import",
+    "job_id": "1001",
+    "company": "某日系IT公司",
+    "title": "对日Java开发工程师",
+    "city": "大连",
+    "salary": "15-25K",
+    "language_req": "N2",
+    "skills": ["Java", "Spring"],
+    "jd_text": "负责对日Java项目开发，要求日语N2，能读写式样书，熟悉Spring框架"
+  },
+  {
+    "platform": "import",
+    "job_id": "1002",
+    "company": "某互联网公司",
+    "title": "Python后端工程师",
+    "city": "深圳",
+    "salary": "20-30K",
+    "language_req": "",
+    "skills": ["Python", "FastAPI"],
+    "jd_text": "负责Python后端服务开发，使用FastAPI，有SQL基础"
+  },
+  {
+    "platform": "import",
+    "job_id": "1003",
+    "company": "某日资贸易公司",
+    "title": "IT系统担当",
+    "city": "深圳",
+    "salary": "8-12K",
+    "language_req": "N1",
+    "skills": ["Windows", "AD"],
+    "jd_text": "负责公司IT系统运维、AD域控管理，要求日语N1商务水平"
+  },
+  {
+    "platform": "import",
+    "job_id": "1004",
+    "company": "某AI公司",
+    "title": "数据工程师",
+    "city": "上海",
+    "salary": "25-40K",
+    "language_req": "",
+    "skills": ["Spark", "Python"],
+    "jd_text": "负责大数据平台建设，使用Spark与Python进行数据处理"
+  },
+  {
+    "platform": "import",
+    "job_id": "1005",
+    "company": "某电商平台",
+    "title": "前端工程师",
+    "city": "北京",
+    "salary": "18-28K",
+    "language_req": "",
+    "skills": ["Vue"],
+    "jd_text": "负责Vue前端开发，配合后端联调"
+  }
+]

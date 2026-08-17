@@ -22,8 +22,8 @@ class Settings(BaseSettings):
     jwt_secret: str = "dev-secret-change-me"
     jwt_algorithm: str = "HS256"
 
-    # AI（MVP 可后置）
-    embedding_model: str = "bge-m3"
+    # AI（MVP 可后置；embedding_model=stub 用离线哈希向量便于验证）
+    embedding_model: str = "stub"  # stub / sentence-transformers / bge-m3
     llm_provider: str = ""  # 空 = 不启用 LLM
 
 
