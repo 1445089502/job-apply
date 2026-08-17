@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# 测试与工具
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# 环境与密钥
+.env
+*.pem
+*.key
+
+# 数据库与数据
+data/*.db
+data/*.sqlite3
+*.sqlite3
+
+# 前端
+node_modules/
+dist/
+.vite/
+
+# 日志
+logs/
+*.log
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
